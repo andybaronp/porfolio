@@ -18,13 +18,13 @@ const Home = () => {
         boxSize="200px"
         src="https://avatars.githubusercontent.com/u/46359791?v=4"
       />
-      <Flex alignSelf="flex-start">
+      <Flex alignSelf="center">
         <Box align="flex-start">
-          <Text fontSize="5xl" fontWeight="semibold">
+          <Text fontSize="4xl" fontWeight="semibold">
             Hi, I am
           </Text>
           <Text
-            fontSize="7xl"
+            fontSize={{ base: "5xl", md: "7xl" }}
             fontWeight="bold"
             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
             bgClip="text"
@@ -32,8 +32,8 @@ const Home = () => {
           >
             Jhoandris Barón
           </Text>
-          <Text color={isDark ? "gray.200" : "gray.500"}>
-            FrontEnd Developer 💻️ JavaScript | React |
+          <Text color={isDark ? "gray.200" : "gray.500"} fontSize="xl">
+            FrontEnd Developer 💻️ JavaScript | Css | Html | React |
           </Text>
         </Box>
       </Flex>

@@ -1,15 +1,20 @@
-import React from "react";
-import { Box, Flex, Text, SimpleGrid } from "@chakra-ui/layout";
-import Icon from "@chakra-ui/icon";
-import { DiFirebase, DiReact } from "react-icons/di";
+import { Box, Text, SimpleGrid } from "@chakra-ui/layout";
+import { GiPriceTag } from "react-icons/gi";
+import { DiFirebase, DiReact, DiCss3, DiJavascript1 } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
-import { Button, useColorMode } from "@chakra-ui/react";
+import { AiFillCalculator, AiFillHtml5 } from "react-icons/ai";
+import Project from "../components/Project";
 function Projects() {
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === "dark";
   return (
     <Box>
-      <Text fontWeight="bold" fontSize="2xl" textAlign="center">
+      <Text
+        fontSize="5xl"
+        textAlign={"center"}
+        fontWeight="bold"
+        bgGradient="linear(to-r, cyan.300, blue.700 )"
+        bgClip="text"
+        mr="8px"
+      >
         Proyects
       </Text>
       <SimpleGrid
@@ -18,78 +23,55 @@ function Projects() {
         minChildWidth="300px"
         spacing="20px"
       >
-        <Flex
-          rounded="xl"
-          direction="column"
-          bg={isDark ? "gray.300" : "cyan.100"}
-          w={{ base: "300px", md: "350px" }}
-          h={{ base: "300px", md: "350px" }}
-          justify="space-between"
-          align="center"
-          _hover={{ bg: "blue.200" }}
-        >
-          <Box>
-            <Icon color="black" p="4" as={DiReact} w="16" h="16" />
-            <Icon color="black" p="4" as={DiFirebase} w="16" h="16" />
-            <Icon color="black" p="4" as={SiTailwindcss} w="16" h="16" />
-          </Box>
+        {/* ADV CLONE */}
+        <Project
+          icon1={DiReact}
+          icon2={DiFirebase}
+          icon3={SiTailwindcss}
+          title="Clone ADV"
+          description="This a clone of the AscoDeVida.com made with React, TailwindCSS and Firebase ."
+          urlGithub="https://github.com/andybaronp/clone-asco-de-vida"
+          urlDemo="https://clone-asco-de-vida.vercel.app/"
+        />
+        {/* CALCULATOR */}
+        <Project
+          icon1={AiFillCalculator}
+          icon2={AiFillHtml5}
+          icon3={DiCss3}
+          title=" Tip Calculator App"
+          description=" This is a FrontendMentor challenge solved with Js Vanilla Css and
+              HTML"
+          urlGithub="https://github.com/andybaronp/tip-calculator"
+          urlDemo="https://andybaronp.github.io/tip-calculator/"
+        />
+        <Project
+          icon1={DiReact}
+          icon2={DiCss3}
+          icon3={AiFillHtml5}
+          title="Movies-React"
+          description=" A   App  for  search Movies  made with React, CSS and HTML."
+          urlGithub="https://github.com/andybaronp/Movies-React"
+          urlDemo="https://movies-react-neon.vercel.app/ "
+        />
 
-          <Text
-            color="black"
-            p="4"
-            fontSize="xl"
-            fontWeight="semibold"
-            textAlign="center"
-          >
-            Clone ADV
-            <Text
-              p="1"
-              fontSize="smaller"
-              textAlign="center"
-              color="blackAlpha.800"
-            >
-              This a clone of the AscoDeVida.com, made with React, Firebase and
-              TailwindCSS.
-            </Text>
-          </Text>
-          <Flex py="2">
-            <Button
-              onClick={() =>
-                window.open("https://github.com/andybaronp/clone-asco-de-vida")
-              }
-              mr="2"
-              _hover={{ bg: "gray.300" }}
-            >
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                color="black"
-                fontSize="xl"
-                fontWeight="semibold"
-              >
-                <Text>GitHub</Text>
-              </a>
-            </Button>
-            <Button
-              onClick={() =>
-                window.open(" https://clone-asco-de-vida.vercel.app/")
-              }
-            >
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                color="black"
-                fontSize="xl"
-                fontWeight="semibold"
-              >
-                <Text>Demo</Text>
-              </a>
-            </Button>
-          </Flex>
-        </Flex>
-        {/* 2 */}
+        <Project
+          icon1={GiPriceTag}
+          icon2={AiFillHtml5}
+          icon3={DiCss3}
+          title="Simple, traffic-based pricing calculator"
+          description="This is a FrontendMentor challenge solved with Js Vanilla Css and HTML"
+          urlGithub="https://github.com/andybaronp/Simple-traffic-based-pricing"
+          urlDemo="https://andybaronp.github.io/Simple-traffic-based-pricing/"
+        />
+        <Project
+          icon1={DiJavascript1}
+          icon2={DiCss3}
+          icon3={AiFillHtml5}
+          title="Search lyrics - Vanilla js"
+          description="Lyrics search engine with Js Vanilla Css and HTML"
+          urlGithub="https://github.com/andybaronp/search-lyrics"
+          urlDemo="https://andybaronp.github.io/search-lyrics/"
+        />
       </SimpleGrid>
     </Box>
   );
