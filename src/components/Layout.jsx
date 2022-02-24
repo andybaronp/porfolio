@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <Container px="6" maxWidth="container.xl">
       <Social />
-      {/* Nav left */}
+
       <Flex
         direction={{ base: "column", md: "row" }}
         h={{ base: "auto", md: "100%" }}
@@ -34,12 +34,6 @@ const Layout = ({ children }) => {
               <Text>Projects</Text>
             </Stack>
           </Link>
-          {/* <Link to="/projects">
-            <Stack direction="row" alignItems="center" spacing="3">
-              <Icon as={AiOutlineHome} />
-              <Text>About</Text>
-            </Stack>
-          </Link> */}
         </Stack>
         <Box width="100%" px={4}>
           {children}
