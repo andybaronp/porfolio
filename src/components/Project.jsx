@@ -17,8 +17,8 @@ const Project = ({
       rounded="xl"
       direction="column"
       bg={isDark ? "gray.300" : "blue.200"}
-      w={{ base: "300px", md: "350px" }}
-      h={{ base: "300px", md: "350px" }}
+      w={"300px"}
+      h={"300px"}
       justify="space-between"
       align="center"
     >

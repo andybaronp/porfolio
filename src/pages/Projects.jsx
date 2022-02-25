@@ -13,16 +13,10 @@ function Projects() {
         fontWeight="bold"
         bgGradient="linear(to-r, cyan.300, blue.700 )"
         bgClip="text"
-        mr="8px"
       >
         Proyects
       </Text>
-      <SimpleGrid
-        justifyItems="center"
-        p="4"
-        minChildWidth="300px"
-        spacing="20px"
-      >
+      <SimpleGrid justifyItems="center" minChildWidth="300px" gap="3">
         {/* ADV CLONE */}
         <Project
           icon1={DiReact}
