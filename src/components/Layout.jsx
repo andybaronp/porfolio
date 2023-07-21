@@ -6,7 +6,7 @@ import ItemSidebar from "./ItemSidebar";
 import Social from "./Social";
 const Layout = ({ children }) => {
   return (
-    <Container px="6" maxWidth="container.xl">
+    <Container px="6" maxWidth="container.xl"  >
       <Social />
 
       <Flex
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
           {children}
         </Box>
       </Flex>
-    </Container>
+    </Container >
   );
 };
 

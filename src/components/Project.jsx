@@ -14,33 +14,34 @@ const Project = ({
   const isDark = colorMode === "dark";
   return (
     <Flex
+
       rounded="xl"
       direction="column"
       bg={isDark ? "gray.300" : "blue.200"}
-      w={"300px"}
-      h={"300px"}
-      justify="space-between"
+      w={"250px"}
+      h={"250px"}
+      justify="space-around"
       align="center"
     >
-      <Box>
-        <Icon color="blackAlpha.800" p="4" as={icon1} w="16" h="16" />
-        <Icon color="blackAlpha.800" p="4" as={icon2} w="16" h="16" />
-        <Icon color="blackAlpha.800" p="4" as={icon3} w="16" h="16" />
+      <Box >
+        <Icon color="blackAlpha.800" p="1" as={icon1} w="8" h="8" />
+        <Icon color="blackAlpha.800" p="1" as={icon2} w="8" h="8" />
+        <Icon color="blackAlpha.800" p="1" as={icon3} w="8" h="8" />
       </Box>
       <Box>
         <Text
           color="black"
-          fontSize="2xl"
+          fontSize="xl"
           fontWeight="semibold"
           textAlign="center"
         >
           {title}
         </Text>
-        <Text p="2" fontSize="xl" textalign="center" color="blackAlpha.800">
+        <Text p="2" fontSize="md" textalign="center" color="blackAlpha.800">
           {description}
         </Text>
       </Box>
-      <Flex py="2" gap="4">
+      <Flex pb="1" gap="3">
         <Button
           onClick={() => window.open(urlGithub, "_blank")}
           _hover={{ transform: "scale(1.1)" }}
